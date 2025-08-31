@@ -30,6 +30,15 @@ icon.addEventListener("click", function () {
     }
 });
 
+// Add keyboard navigation
+document.addEventListener('keydown', function(event) {
+    if (event.key === 'ArrowRight') {
+        moveSlider('next');
+    } else if (event.key === 'ArrowLeft') {
+        moveSlider('prev');
+    }
+});
+
 function moveSlider(direction) {
     let sliderItems = sliderList.querySelectorAll('.item')
     let thumbnailItems = document.querySelectorAll('.thumbnail .item')
